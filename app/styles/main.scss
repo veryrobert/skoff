@@ -1,0 +1,275 @@
+@import "compass/reset";
+@import "compass/css3/transition";
+
+*,
+*:after,
+*:before {
+  margin: 1px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+  font-family: "stag", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #dddad5;
+}
+
+// Page structure .wrap & .full-width
+
+[class*='col-'] {
+  float: left;
+}
+
+[class*='col-']:last-of-type {
+  float: right;
+}
+
+.content {}
+
+.full-width {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+}
+
+#slider {
+  height: 400px;
+  background: #ccc;
+  margin-top: -30px;
+}
+
+.wrap {
+  width: 1020px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.wrap.profile {
+    width: 1100px;
+}
+
+
+.row {
+  width: 100%;
+  background: orange;
+}
+
+.col-1 {
+  width: 100%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 33.3333333333%;
+}
+
+.col-4 {
+  width: 25%;
+}
+
+.col-5 {
+  width: 20%;
+}
+
+.col-6 {
+  width: 16.6666666667%;
+}
+
+header {
+  height: 135px;
+  padding: 0px 0px;
+  position: relative;
+  z-index: 9999;
+  &.wrap {
+    padding-top: 45px;
+    width: 1040px;
+  }
+  ul li {
+    display: inline-block;
+    border-left: dotted 3px #eee;
+    height: 70px;
+    padding: 0 20px;
+    text-align: center;
+    width: 49%;
+    // margin-top: -34px;
+
+    margin-top: -10px;
+
+    background: 50% 90% no-repeat white;
+     @include transition(all 0.2s 0s ease);
+
+    &:hover {
+        background: url("../images/triangle.svg") 50% 100% no-repeat;
+        @include transition(all 0.2s 0s ease);
+    }
+    
+
+    &:last-child {
+      border-right: dotted 3px #eee;
+    }
+    span {
+      font-size: 11px;
+      display: inline-block;
+      margin-top: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+.zigzag {
+  position: relative;
+  /* top: 150px; */
+  /* left: calc(50% - 62.5px); */
+  z-index: 9999;
+  height: 30px;
+  width: 125px;
+  background: url("../images/zigzag.svg") 50% 100% no-repeat;
+  margin: 0 auto;
+}
+
+footer ul li {
+  display: inline;
+}
+
+nav a {
+  font: 24px gin;
+  color: #000;
+  text-decoration: none;
+  top: 8px;
+  position: relative;
+}
+
+.logo {
+  background: url("../images/logo.svg") 50% 0 no-repeat;
+  height: 110px;
+  margin-top: -34px;
+}
+
+.counter {
+  height: 40px;
+  ul {
+    text-align: center;
+    li {
+      // padding: 5px;
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      border: solid 2px #404041; 
+      border-radius: 10px;
+      margin: 2.5px;
+
+    &.on {
+        background: #404041;
+    }
+
+    }
+  }
+}
+
+.profile {
+  height: 380px;
+  padding: 50px 0;
+  .col-2 {
+    width: 45%;
+  }
+}
+
+.profile-image {
+    height: 335px;
+    background: url("../images/donal.jpg") -0% 0 no-repeat;
+}
+
+//  Typography
+
+p {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: outsiders;
+}
+
+.white {
+  background: #fff;
+}
+
+.content {
+  margin: 0 15px;
+}
+
+article {
+  text-align: center;
+  .content {
+    background: white;
+    min-height: 300px;
+    padding: 20px;
+    margin: 0 15px;
+  }
+  &.col-4 .content {
+    min-height: 520px;
+  }
+}
+
+.thumb {
+  margin-left: -20px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 44px;
+  font-family: "Knockout";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: -0.5px;
+}
+
+.profile p {
+  margin-right: 30px;
+}
+
+
+
+p.large {
+  font: 18px/24px stag;
+}
+
+.more {
+  margin: 30px auto 0px auto;
+  display: block;
+  height: 8px;
+  width: 32px;
+  background: url("../images/more.svg") 0 0;
+}
+
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
