@@ -9,6 +9,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-rendering: antialiased;
+  // -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -46,7 +48,7 @@ body {
   width: 1020px;
   margin: 0 auto;
   overflow: hidden;
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 .wrap.profile {
@@ -155,7 +157,7 @@ nav a {
 }
 
 .counter {
-  height: 40px;
+  height: 55px;
   ul {
     text-align: center;
     li {
@@ -188,7 +190,35 @@ nav a {
     background: url("../images/donal.jpg") -0% 0 no-repeat;
 }
 
+
+
 //  Typography
+
+h3.section-title {
+        float: left;
+      font: 28px gin;
+}
+
+a.read-more {
+    font: 15px gin;
+    color: white;
+    float: right;
+    height: 32px;
+    width:165px;
+    padding: 5px;
+    border: none;
+    background: #3f3630;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.content.title {
+    display: block;
+    height: auto;
+    margin-bottom: 70px;
+}
+
+
 
 p {
   font-size: 13px;
