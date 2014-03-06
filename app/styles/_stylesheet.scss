@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'display1';
+    src: url('../font/display1.eot');
+    src: url('../font/display1.eot?#iefix') format('embedded-opentype'),
+         url('../font/display1.woff') format('woff'),
+         url('../font/display1.ttf') format('truetype'),
+         url('../font/display1.svg#display1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'display2';
+    src: url('../font/display2.eot');
+    src: url('../font/display2.eot?#iefix') format('embedded-opentype'),
+         url('../font/display2.woff') format('woff'),
+         url('../font/display2.ttf') format('truetype'),
+         url('../font/display2.svg#display2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'display3';
+    src: url('../font/display3.eot');
+    src: url('../font/display3.eot?#iefix') format('embedded-opentype'),
+         url('../font/display3.woff') format('woff'),
+         url('../font/display3.ttf') format('truetype'),
+         url('../font/display3.svg#display3') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'seriffamily';
+    src: url('../font/serifregular.eot');
+    src: url('../font/serifregular.eot?#iefix') format('embedded-opentype'),
+         url('../font/serifregular.woff') format('woff'),
+         url('../font/serifregular.ttf') format('truetype'),
+         url('../font/serifregular.svg#serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'seriffamily';
+    src: url('../font/serifregularitalic.eot');
+    src: url('../font/serifregularitalic.eot?#iefix') format('embedded-opentype'),
+         url('../font/serifregularitalic.woff') format('woff'),
+         url('../font/serifregularitalic.ttf') format('truetype'),
+         url('../font/serifregularitalic.svg#serifitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    }
+
+@font-face {
+    font-family: 'seriffamily';
+    src: url('../font/serifbold.eot');
+    src: url('../font/serifbold.eot?#iefix') format('embedded-opentype'),
+         url('../font/serifbold.woff') format('woff'),
+         url('../font/serifbold.ttf') format('truetype'),
+         url('../font/serifbold.svg#serifbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    }
+    
+@font-face {
+    font-family: 'seriffamily';
+    src: url('../font/serifbolditalic.eot');
+    src: url('../font/serifbolditalic.eot?#iefix') format('embedded-opentype'),
+         url('../font/serifbolditalic.woff') format('woff'),
+         url('../font/serifbolditalic.ttf') format('truetype'),
+         url('../font/serifbolditalic.svg#serifitalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    }
+    
+    
+
+.display1 {
+    font-family: 'display1', georgia, serif;
+    font-size: 30px;
+    }
+    
+.display2 {
+    font-family: 'display2', georgia, serif;
+    font-size: 90px;
+    line-height: 90px;
+    text-transform: uppercase;
+    }
+    
+.display3 {
+    font-family: 'display3', georgia, serif;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    }
+
+.text1, .text2, .text3, .text4 {
+    line-height: 21px;
+    font-size: 15px;
+    word-spacing: 1px;
+    }   
+
+.text1 {
+    font-family: 'seriffamily', georgia, serif;
+    font-weight: normal;
+    line-height: 21px;
+    font-size: 15px;
+    display: block;
+    width: 650px;
+    }
+    
+.text2 {
+    font-family: 'seriffamily', georgia, serif;
+    font-weight: normal;
+    font-style: italic;
+    }
+    
+.text3 {
+    font-family: 'seriffamily', georgia, serif;
+    font-weight: bold;
+    }
+    
+.text4 {
+    font-family: 'seriffamily', georgia, serif;
+    font-weight: bold;
+    font-style: italic;
+    }
+    
+    
