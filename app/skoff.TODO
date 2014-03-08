@@ -2,10 +2,10 @@
  Skoff Website:
 
    General:
-    ☐ mailchimp contact form
+    ✔ mailchimp contact form @done (14-03-08 13:24)
     ☐ hook up all links
-    ☐ contact form
-    ☐ wordpress local install
+    ✔ contact form @done (14-03-08 13:24)
+    ✔ wordpress local install @done (14-03-08 17:11)
     ☐ wordpress mediatemplate install
        
     Clean up css:
@@ -13,6 +13,8 @@
     ☐ Color Variables
     ☐ Typography
     ☐ Page Areas
+    ☐ Create SVG sprite https://github.com/jkphl/iconizr
+    ☐ Make fall backs for all svgs
 
     ✔ setup ssh with mediatemple @done (14-03-07 18:32)
     ✔ contact page @done (14-03-07 18:32)

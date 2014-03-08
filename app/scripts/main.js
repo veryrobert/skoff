@@ -13,7 +13,7 @@ if($('body').hasClass('home')){
 
   var slider =
   Swipe(document.getElementById('slider'), {
-    auto: 5000,
+    auto: 6000,
     continuous: true,
     callback: function(pos) {
 

@@ -28,12 +28,26 @@ body {
   background: #dddad5;
 }
 
-a {
-  text-decoration: none;
-  color: #524741;
-}
-
 // Page structure .wrap & .full-width
+
+
+
+// Reuseable Styles 
+@mixin center { position: relative; width: 1020px; margin: 0 auto; }
+
+
+// ------------------------------------------ Grid ------------------------------------------ //
+
+.row 	 { width: 100%; }
+.col-1 { width: 100%; }
+.col-2 { width: 50%; }
+.col-3 { width: 33.3333333333%; }
+.col-4 { width: 25%; }
+.col-5 { width: 20%; }
+.col-6 { width: 16.6666666667%; }
+.col-9 { width: 75%; } //spans nine columns
+.clear-fix { clear: both; }
+
 
 [class*='col-'] {
   float: left;
@@ -52,128 +66,91 @@ a {
   }
 }
 
-.clear-fix {
-  clear: both;
+
+// Structure
+.full-width { width: 100%; margin: 0 auto; background: #fff; }
+.wrap 			{ @include center; overflow: hidden; padding: 40px 0; }
+
+
+// Typography
+@mixin font-24 { font: 24px display1; }
+@mixin slider-large { font: 97px/80px display2; }
+
+
+// Color
+$black: rgba(0,0,0,1);
+$brown: #524741;
+$blue: #73a2c6;
+$red: #e5612f;
+$yellow: #e3ae1e;
+$blue-darker: darken($blue, 6%);
+$red-darker: darken($red, 6%);
+$yellow-darker: darken($yellow, 3%);
+
+// Links
+a { text-decoration: none; color: #524741; }
+
+
+// ------------------------------------------ Header ------------------------------------------ //
+
+nav a { @include font-24; color: $black; top: 8px; position: relative; }
+.logo { background: url("../images/logo.svg") 50% 0 no-repeat; height: 110px; margin-top: -34px; }
+
+.zigzag-wrap { @include center; height: 30px; }
+.zigzag 		 { position: absolute; height: 30px; width: 125px; left: 450px; z-index: 9999; background: url("../images/zigzag.svg") 50% 100% no-repeat; }
+
+// Footer 
+footer ul li { display: inline; }
+footer.full-width { margin-top: 40px; }
+footer > .wrap { padding: 20px 0; }
+
+
+
+// ------------------------------------------ Home ------------------------------------------ //
+
+.wrap.profile { width: 1100px; }
+
+// Slider Stuff
+#slider > div > div { display: block; height: 450px; width: 100%; background-size: cover; }
+#slider 			{ height: 400px; background: #ccc; margin-top: -30px; }
+// .slider-1 		{ background: url("../images/bg-one.jpg") 0% 0% no-repeat #000; }
+// .slider-2 		{ background: url("../images/background-2.jpg") 0% 0% no-repeat #000; }
+// .slider-3 		{ background: url("../images/bg-3.jpg") 0% 0% no-repeat #000; }
+.slider-text 	{ position: absolute; width: 300px; left: 20px; top: 30px; text-align: center; color: white;
+					h2 	{ @include slider-large; }
+					h3 	{ font-size: 20px; line-height: 28px; letter-spacing: 1px; }
+					p  	{ font-size: 16px; line-height: 24px; }
 }
+.text-wrap 		{ @include center; z-index: 8888; }
 
-.content {}
+.bg {
+	width: 100%;
+	background: #000;
+	height:410px;
 
-.full-width {
-  width: 100%;
-  margin: 0 auto;
-  background: #fff;
-}
-
-#slider {
-  height: 400px;
-  background: #ccc;
-  margin-top: -30px;
-}
-
-
-.text-wrap {
-	position: relative;
-	width: 1020px;
-	margin: 0 auto;
-}
-
-.slider-text {
 	position: absolute;
-	width: 300px;
-	text-align: center;
-	color: white;
+	top: 0px;
+	z-index: 1111;
 
-	left: 20px;
-	top: 30px;
-
-h2 {
-	font-size: 97px;
-	line-height: 80px;
-}
-h3 {
-	font-size: 20px;
-	line-height: 28px;
-	letter-spacing: 1px;
-}
-
-p {
-	font-size: 16px;
-	line-height: 24px;
-}
+	img {
+		height: 400px;
+	}
 
 }
 
 
-#slider > div > div {
-		display: block;
-		height: 450px;
-		width: 100%;
- background-size: cover;
-}
 
-.slider-1 {
-	  background: url("images/bg-one.jpg") 0% 0% no-repeat #000;
-}
+// Our Pies Page
 
-.slider-2 {
-	 background: url("images/background-2.jpg") 0% 0% no-repeat #000;
-	
-}
-.slider-3 {
-	 background: url("images/bg-3.jpg") 0% 0% no-repeat #000;
-}
+// Blog Page
+
+// Single Page
+
+// Contact Page
+
+// Fixes
 
 
-
-#slider > div > div > img {
-// width: 100%;
-height: auto;
-}
-
-
-
-.wrap {
-  width: 1020px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 40px 0;
-}
-
-.wrap.profile {
-  width: 1100px;
-}
-
-.row {
-  width: 100%;
-}
-
-.col-1 {
-  width: 100%;
-}
-
-.col-2 {
-  width: 50%;
-}
-
-.col-3 {
-  width: 33.3333333333%;
-}
-
-.col-4 {
-  width: 25%;
-}
-
-.col-5 {
-  width: 20%;
-}
-
-.col-6 {
-  width: 16.6666666667%;
-}
-
-.col-9 {
-  width: 75%;
-}
 
 header {
   height: 135px;
@@ -196,7 +173,7 @@ header {
     background: 50% 90% no-repeat white;
     @include transition(all 0.2s 0s ease);
     &:hover {
-      background: url("images/triangle.svg") 50% 100% no-repeat;
+      background: url("../images/triangle.svg") 50% 100% no-repeat;
       @include transition(all 0.2s 0s ease);
     }
     &:last-child {
@@ -212,52 +189,10 @@ header {
   }
 }
 
-.zigzag-wrap {
-	position: relative;
-	width: 1020px;
-	margin: 0 auto;
-	 height: 30px;
-
-}
-
-.zigzag {
-  position: absolute;
-  /* top: 150px; */
-  left: 450px;
-  /* left: calc(50% - 62.5px); */
-  z-index: 9999;
-  height: 30px;
-  width: 125px;
-  background: url("images/zigzag.svg") 50% 100% no-repeat;
-}
 
 
 
-footer ul li {
-  display: inline;
-}
 
-footer.full-width {
-  margin-top: 40px;
-}
-
-footer > .wrap {
-  padding: 20px 0;
-}
-
-nav a {
-  font: 24px display1;
-  color: #000;
-  text-decoration: none;
-  top: 8px;
-  position: relative;
-}
-
-.logo {
-  background: url("images/logo.svg") 50% 0 no-repeat;
-  height: 110px;
-  margin-top: -34px;
-}
 
 .counter {
   height: 55px;
@@ -288,7 +223,7 @@ nav a {
 
 .profile-image {
   height: 335px;
-  background: url("images/donal.jpg") 0% 0 no-repeat;
+  background: url("../images/donal.jpg") 0% 0 no-repeat;
 }
 
 //  Typography
@@ -373,20 +308,13 @@ article {
   background: none;
   min-height: 200px;
   margin-bottom: 40px;
-  background: url("images/arrows.svg") 50% 100% no-repeat;
+  background: url("../images/arrows.svg") 50% 100% no-repeat;
   p.large {
     padding: 20px 150px;
     margin-bottom: 20px;
   }
 }
 
-$blue: #73a2c6;
-$red: #e5612f;
-$yellow: #e3ae1e;
-
-$blue-darker: darken($blue, 6%);
-$red-darker: darken($red, 6%);
-$yellow-darker: darken($yellow, 3%);
 
 article .left {
   text-align: left;
@@ -399,21 +327,21 @@ article .left {
   }
   &.blue {
     background-color: #73a2c6;
-    background: url("images/stakeonion.png") 10% 125% no-repeat $blue;
+    background: url("../images/stakeonion.png") 10% 125% no-repeat $blue;
     &:hover {
       background-color: $blue-darker;
     }
   }
   &.red {
     background-color: #e5612f;
-    background: url("images/pulledpork.png") 10% 125% no-repeat $red;
+    background: url("../images/pulledpork.png") 10% 125% no-repeat $red;
     &:hover {
       background-color: $red-darker;
     }
   }
   &.yellow {
     background-color: #e3ae1e;
-    background: url("images/chickham.png") 10% 125% no-repeat $yellow;
+    background: url("../images/chickham.png") 10% 125% no-repeat $yellow;
     &:hover {
       background-color: $yellow-darker;
     }
@@ -484,13 +412,13 @@ p.large {
   display: block;
   height: 8px;
   width: 32px;
-  background: url("images/more.svg") 0 0;
+  background: url("../images/more.svg") 0 0;
 }
 
 .more-white {
   @extend .more;
   margin: 30px 0px 0px 0px;
-  background: url("images/more-white.svg") 0 0;
+  background: url("../images/more-white.svg") 0 0;
 }
 
 .swipe {
@@ -539,7 +467,7 @@ footer ul.footer-menu {
   display: inline-block;
   height: 80px;
   width: 120px;
-  background: url("images/100percent.svg") 50% 0 no-repeat;
+  background: url("../images/100percent.svg") 50% 0 no-repeat;
   border-right: dotted 2px #eee;
 }
 
@@ -547,7 +475,7 @@ footer ul.footer-menu {
   display: inline-block;
   height: 80px;
   width: 120px;
-  background: url("images/loveirish.svg") 50% 0 no-repeat;
+  background: url("../images/loveirish.svg") 50% 0 no-repeat;
   border-right: dotted 2px #eee;
 }
 
@@ -563,7 +491,7 @@ footer ul.footer-menu {
 .content.pie-info {
   min-height: 600px;
   display: inline-block;
-  background: url("images/sweetpie.jpg") 0% 100% no-repeat white;
+  background: url("../images/sweetpie.jpg") 0% 100% no-repeat white;
 }
 
 .col-2.pie-info {
@@ -588,7 +516,7 @@ aside {
     padding: 8px 10px 8px 0px;
     color: #000;
     &:hover {
-      background: url("images/right-arrow.svg") 97% 50% no-repeat;
+      background: url("../images/right-arrow.svg") 97% 50% no-repeat;
     }
     &:last-of-type {
       border-bottom: dotted 2px #808285;
@@ -605,9 +533,9 @@ aside {
     text-transform: capitalize;
     border-top: dotted 2px #ccc;
     padding: 10px 10px 10px 6px;
-    background: url("images/down.svg") 97% 50% no-repeat;
+    background: url("../images/down.svg") 97% 50% no-repeat;
     &.active {
-      background: url("images/up.svg") 97% 50% no-repeat;
+      background: url("../images/up.svg") 97% 50% no-repeat;
     }
   }
   p {
@@ -630,13 +558,13 @@ aside {
   vertical-align: middle;
   margin-right: 14px;
   &.cooker {
-    background: url("images/cooker.svg") 0% 100% no-repeat white;
+    background: url("../images/cooker.svg") 0% 100% no-repeat white;
   }
   &.pot {
-    background: url("images/pot.svg") 0% 100% no-repeat white;
+    background: url("../images/pot.svg") 0% 100% no-repeat white;
   }
   &.pie {
-    background: url("images/pie.svg") 0% 100% no-repeat white;
+    background: url("../images/pie.svg") 0% 100% no-repeat white;
   }
 }
 
@@ -673,7 +601,7 @@ aside {
   margin-top: -30px;
   display: inline-block;
   padding: 25px;
-  background: url("images/arrows.svg") 25px 95% no-repeat white;
+  background: url("../images/arrows.svg") 25px 95% no-repeat white;
   h2 {
     margin: 0 0 10px 0;
   }
@@ -725,7 +653,7 @@ aside {
     height: 25px;
     width: 185px;
     display: block;
-    background: url("images/arrows.svg") 50% 0% no-repeat;
+    background: url("../images/arrows.svg") 50% 0% no-repeat;
   }
 }
 
@@ -733,7 +661,7 @@ aside {
   height: 64px;
   width: 38px;
   display: block;
-  background: url("images/date.svg") 0% 0% no-repeat;
+  background: url("../images/date.svg") 0% 0% no-repeat;
   position: absolute;
   z-index: 9999;
   .day {
@@ -790,17 +718,17 @@ aside {
 
 .social {
   padding: 60px 0;
-  background: url("images/social.svg") 10% 10% no-repeat;
+  background: url("../images/social.svg") 10% 10% no-repeat;
 }
 
 .address {
   padding: 60px 0;
-  background: url("images/map.svg") -3% 10% no-repeat;
+  background: url("../images/map.svg") -3% 10% no-repeat;
 }
 
 .phone {
   padding: 60px 0;
-  background: url("images/phone.svg") 0% 10% no-repeat;
+  background: url("../images/phone.svg") 0% 10% no-repeat;
 }
 
 .small {
@@ -827,25 +755,25 @@ aside {
 }
 
 .twitter a {
-  background: url("images/twitter.svg") 0% 0% no-repeat;
+  background: url("../images/twitter.svg") 0% 0% no-repeat;
 }
 
 .facebook a {
-  background: url("images/facebook.svg") 0% 0% no-repeat;
+  background: url("../images/facebook.svg") 0% 0% no-repeat;
 }
 
 .youtube a {
-  background: url("images/youtube.svg") 0% 0% no-repeat;
+  background: url("../images/youtube.svg") 0% 0% no-repeat;
 }
 
 .instagram a {
-  background: url("images/instagram.svg") 0% 0% no-repeat;
+  background: url("../images/instagram.svg") 0% 0% no-repeat;
 }
 
 .donallogo {
   a {
     width: 160px !important;
-    background: url("images/donal-logo.svg") 0% 0% no-repeat;
+    background: url("../images/donal-logo.svg") 0% 0% no-repeat;
   }
   margin-left: 30px;
 }
@@ -875,7 +803,7 @@ input.email[type="email"] {
 }
 
 input#mc-embedded-subscribe[type="submit"] {
-  background: url("images/triangle-right.svg") 50% 49% no-repeat #524741;
+  background: url("../images/triangle-right.svg") 50% 49% no-repeat #524741;
   height: 32px;
   width: 32px;
   border: none;
@@ -924,7 +852,7 @@ input#mc-embedded-subscribe[type="submit"] {
     padding: 20px;
     font-family: 'seriffamily';
     font-size: 15px;
-    background: url("images/bite.svg") 100% 102% no-repeat white;
+    background: url("../images/bite.svg") 100% 102% no-repeat white;
     &:focus {
       outline: none;
     }
